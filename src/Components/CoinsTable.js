@@ -25,11 +25,14 @@ const CoinsTable = () => {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState();
   const { currency, symbol } = CryptoState();
+
   const navigate = useNavigate();
 
   const fetchCoins = async () => {
     setLoading(true);
     const { data } = await axios.get(CoinList(currency));
+    console.log(data);
+
     setCoins(data);
     setLoading(false);
   };
@@ -89,7 +92,7 @@ const CoinsTable = () => {
           {loading ? (
             <LinearProgress style={{ backgroundColor: "gold" }} />
           ) : (
-            <Table>
+            <Table aria-label="simple table">
               <TableHead style={{ backgroundColor: "#EEBC1D" }}>
                 <TableRow>
                   {["Coin", "Price", "24h Change", "Market Cap"].map((head) => (
@@ -100,13 +103,14 @@ const CoinsTable = () => {
                         fontFamily: "Rubik",
                       }}
                       key={head}
-                      align={head === "Coin" ? "justify" : "right"}
+                      align={head === "Coin" ? "left" : "right"}
                     >
                       {head}
                     </TableCell>
                   ))}
                 </TableRow>
               </TableHead>
+
               <TableBody>
                 {handleSearch().map((row) => {
                   const profit = row.price_change_percentage_24h > 0;
