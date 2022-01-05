@@ -23,7 +23,7 @@ import { numberWithCommas } from "./Banner/Carousel";
 const CoinsTable = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const { currency, symbol } = CryptoState();
 
   const navigate = useNavigate();
@@ -103,7 +103,7 @@ const CoinsTable = () => {
                         fontFamily: "Rubik",
                       }}
                       key={head}
-                      align={head === "Coin" ? "left" : "right"}
+                      align={head === "Coin" ? "inherit" : "right"}
                     >
                       {head}
                     </TableCell>
