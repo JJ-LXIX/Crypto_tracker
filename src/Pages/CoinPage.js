@@ -143,7 +143,7 @@ const CoinPage = () => {
         </div>
       </div>
 
-      <CoinInfo />
+      <CoinInfo coin={coin} />
     </div>
   );
 };
