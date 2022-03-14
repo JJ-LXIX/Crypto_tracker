@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Homepage from "./Pages/Homepage";
 import CoinPage from "./Pages/CoinPage";
 import { makeStyles } from "@material-ui/core";
+import React from "react";
 
 function App() {
   const useStyles = makeStyles(() => ({
