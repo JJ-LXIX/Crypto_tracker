@@ -136,6 +136,7 @@ const CoinsTable = () => {
                             src={row?.image}
                             alt={row.name}
                             height="50"
+                            width="50"
                             style={{ marginBottom: 10 }}
                           />
 
