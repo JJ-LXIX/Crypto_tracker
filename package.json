@@ -1,7 +1,7 @@
 {
   "name": "crypto-tracker",
   "version": "0.1.0",
-  "homepage": "https://JJ-LXIX.github.io/crypto-tracker",
+  "homepage": "https://JJ-LXIX.github.io/",
   "private": false,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
