@@ -74,7 +74,7 @@ export default function UserSidebar() {
     setAlert({
       open: true,
       type: "success",
-      message: "Logout Successfull !",
+      message: "Logout Successful !",
     });
 
     toggleDrawer();
