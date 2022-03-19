@@ -1,7 +1,7 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBbfAc8qGL5eVdFojuCNfG8bEgC_pxVUyA",
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
 
-  authDomain: "crypto-tracker-384be.firebaseapp.com",
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
 
   projectId: "crypto-tracker-384be",
 
